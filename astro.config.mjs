@@ -6,9 +6,6 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   output: 'static',
-
-  base: '/Portfolio/',  // ← repo name with leading and trailing slash (case sensitive)
-
   site: 'https://Kanishk-Kulshrestha.github.io/Portfolio',  // ← your GitHub Pages URL
 
   trailingSlash: 'always',
