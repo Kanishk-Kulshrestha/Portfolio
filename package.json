@@ -2,9 +2,14 @@
     "name": "devidevio",
     "type": "module",
     "version": "1.0.0",
+
+
+
     "scripts": {
         "dev": "astro dev",
         "build": "astro build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist",
         "preview": "astro preview",
         "astro": "astro"
     },
@@ -18,6 +23,7 @@
         "@astrojs/sitemap": "^3.2.1",
         "@astrojs/tailwind": "^5.1.4",
         "astro-compress": "^2.3.6",
+        "gh-pages": "^6.3.0",
         "sass": "^1.85.1"
     }
 }
