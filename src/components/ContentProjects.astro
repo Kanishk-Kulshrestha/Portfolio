@@ -11,22 +11,22 @@ interface Project {
 };
 
 const projects: Project[] = [{
-    name: 'Papersend.io',
-    description: 'Papersend is the free alternative to DocSend for secure document sharing, tracking, and Data Rooms. Customize branding, control access, and protect your documents.',
+    name: 'Quanta',
+    description: 'A lightweight command-line text editor built in C for Linux systems. (should have done for windows, ik)',
     link: {
-        url: 'https://papersend.io/',
+        url: 'https://github.com/Kanishk-Kulshrestha/Quanta',
     }
 }, {
-    name: 'Qivi.io',
-    description: 'Qivi is an all-in-one application designed to streamline business operations, enhance productivity, and maximize success. Data security is a priority.',
+    name: 'RayLite',
+    description: 'RayLite is a minimal and efficient ray tracer written from scratch in C++.',
     link: {
-        url: 'https://qivi.io/'
+        url: 'https://github.com/Kanishk-Kulshrestha/RayLite'
     }
 }, {
-    name: 'TECHPOINT.de',
-    description: 'TECHPOINT is a local IT service provider based in the Starnberg district and the Fünfseenland region, specializing in delivering reliable and modern IT solutions.',
+    name: 'JAPL',
+    description: 'Short for \"Just another Programming Language\", a tiny compiler for a custom language, cause why not? ',
     link: {
-        url: 'https://techpoint.de/'
+        url: 'https://github.com/Kanishk-Kulshrestha/JAPL'
     }
 }];
 ---
@@ -63,7 +63,7 @@ const projects: Project[] = [{
                                 hover:text-primary
                                 hover:border-primary
                             ">
-                            {project.link.buttonLabel || 'Open Project Website'}
+                            {project.link.buttonLabel || 'Open Github'}
                         </a>
                     : null
                 }

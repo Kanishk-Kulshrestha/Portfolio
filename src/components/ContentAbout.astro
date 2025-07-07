@@ -1,95 +1,85 @@
 ---
 import { Code } from 'astro:components';
 
-const code = `interface Developer {
-    name: string;
-    skills: string[];
-    interests: string[];
+const code = `// Developer Profile: Kanishk Kulshrestha
+
+#include <string>
+#include <vector>
+#include <map>
+#include "me.h"
+
+// --- Tech Stack ---
+struct TechStack {
+    std::vector<std::string> devOps = {
+        "GitHub", "GitLab", "Docker", "Bash", "NGINX", "Cloudflare Tunnels"
+    };
+
+    std::vector<std::string> backend = {
+        "C++", "Python", "Flask", "Node.js", "Express", "MongoDB",
+        "PostgreSQL", "SQLite", "Redis", "REST APIs", "WebSockets", "Linux"
+    };
+
+    std::vector<std::string> systems = {
+        "ESP32", "ESP8266", "FreeRTOS", "Sockets", "Serial Protocols",
+        "Shell Scripts", "Makefiles", "Networking", "Systemd Services"
+    };
+
+    std::vector<std::string> tooling = {
+        "Neovim", "tmux", "htop", "ncdu", "nmap", "ripgrep", "fzf", "clangd"
+    };
 };
 
-interface TechStack {
-    devOps: string[];
-    backend: string[];
-   frontend: string[];
+// --- Developer Info ---
+struct Developer {
+    std::string name = "Kanishk Kulshrestha";
+
+    std::vector<std::string> skills = {
+        // devOps
+        "GitHub", "GitLab", "Docker", "Bash", "NGINX", "Cloudflare Tunnels",
+
+        // backend
+        "C++", "Python", "Flask", "Node.js", "Express", "MongoDB",
+        "PostgreSQL", "SQLite", "Redis", "REST APIs", "WebSockets", "Linux",
+
+        // systems
+        "ESP32" , "FreeRTOS", "Sockets", "Serial Protocols",
+        "Shell Scripts", "Makefiles", "Networking", "Systemd Services",
+
+        // tooling
+        "Neovim", "tmux", "htop", "ncdu", "nmap", "ripgrep", "fzf", "clangd"
+    };
+
+    std::vector<std::string> interests = {
+        "Systems Programming",
+        "IoT & Microcontrollers",
+        "CLIs & Terminal Tools",
+        "Reverse Engineering",
+        "Efficient Local Backends",
+        "Competitive Programming",
+        "Custom Tooling & Automation"
+    };
 };
 
-type ContactType = 'github' | 'twitter' | 'linkedIn' | 'xing' | 'email';
-
-const techStack: TechStack = {
-    devOps: [
-        'GitLab',
-        'GitHub',
-        'Cloudflare',
-        'Docker'
-    ],
-    frontend: [
-        'Angular',
-        'JavaScript',
-        'TypeScript',
-        'TailwindCSS',
-        'PrimeNG',
-        'Astro',
-        'Ionic',
-        'Stencil',
-        'Capacitor',
-        'SCSS',
-        'Markdown',
-        'WordPress'
-    ],
-    backend: [
-        'Supabase',
-        'Node.js',
-        'Bun',
-        'Deno',
-        'PostgreSQL',
-        'MySQL',
-        'S3 Storage',
-        'Resend'
-    ]
+// --- Contact ---
+enum class ContactType {
+    GitHub,
+    Twitter,
+    LinkedIn,
+    Email
 };
 
-// Developer profile
-const me: Developer = {
-    name: 'Dejan Vi.',
-    skills: [
-        ...techStack.devOps,
-        ...techStack.backend,
-        ...techStack.frontend
-    ],
-    interests: [
-        'Open Source',
-        'Security',
-        'Privacy',
-        'Performance',
-        'Self-Hosting',
-        'Networking'
-    ]
+std::map<ContactType, std::string> contact = {
+    { ContactType::GitHub,   "https://github.com/Kanishk-Kulshrestha" },
+    { ContactType::Twitter,  "https://x.com/k4n15hk" },
+    { ContactType::LinkedIn, "https://www.linkedin.com/in/k-zar" },
+    { ContactType::Email,    "kkulshrestha47@gmail.com" }
 };
-
-// Contact function
-const contact = (type: ContactType): string => {
-    switch (type) {
-        case 'github':
-            return 'https://github.com/devidevio';
-        case 'twitter':
-            return 'https://x.com/devidev_io';
-        case 'linkedIn':
-            return 'https://www.linkedin.com/in/dejan-vi';
-        case 'xing':
-            return 'https://www.xing.com/profile/Dejan_Vintonjiv';
-        case 'email':
-            return 'hi@devidev.io';
-        default:
-            return 'Send fax.';
-    }
-};
-
 `;
 ---
 
 <Code
     code={code}
-    lang="js"
+    lang="cpp"
     wrap={true}
 />
 
