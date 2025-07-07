@@ -7,6 +7,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
     output: 'static',
     trailingSlash: 'always',
+    base: '/Portfolio/',
     site: 'https://github.com/Kanishk-Kulshrestha/Portfolio',
 
     // Single page, no prefetch needed
